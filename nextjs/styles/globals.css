@@ -1,0 +1,7 @@
+@import url('./Footer.module.css');
+@import url('./Header.module.css');
+@import url('./style.css');
+
+.hover:hover{
+    background-color: #0070f3;
+}
