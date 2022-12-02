@@ -22,7 +22,7 @@ namespace Core.Entitites
         public List<ProductionCompanies> production_companies { get; set; }
         public List<ProductionCountries> production_countries { get; set; }
         public string release_date { get; set; }
-        public int revenue { get; set; }
+        public long revenue { get; set; }
         public int runtime { get; set; }
         public List<SpokenLanguages> spoken_languages { get; set; }
 
