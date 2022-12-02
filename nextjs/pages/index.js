@@ -10,6 +10,9 @@ const Index = (data2) => {
   const [state, setState] = useState([])
 
   useEffect(() => {
+    while(localStorage.getItem('items') == null){
+      localStorage.setItem('items', JSON.stringify([  ]))
+    }
     if (items) {
       arr = JSON.parse(localStorage.getItem('items'))
       arr.push(items)
@@ -203,6 +206,7 @@ const Index = (data2) => {
 }
 
 export async function getServerSideProps(context) {
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
   const https = require('https')
   const httpsAgent = new https.Agent({
     rejectUnauthorized: false
